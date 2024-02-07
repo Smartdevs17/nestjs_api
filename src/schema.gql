@@ -1,0 +1,49 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Auth {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Mutation {
+  signin(signinInput: SigninInput!): SigninResponse!
+  signup(signupInput: SignupInput!): SignupResponse!
+}
+
+type Query {
+  auth: [Auth!]!
+}
+
+input SigninInput {
+  password: String!
+  username: String!
+}
+
+type SigninResponse {
+  """accessToken"""
+  accessToken: String!
+
+  """user information"""
+  user: User!
+}
+
+input SignupInput {
+  password: String!
+  username: String!
+}
+
+type SignupResponse {
+  """success message"""
+  message: String!
+
+  """success status"""
+  success: Boolean!
+}
+
+type User {
+  id: Float!
+  password: String!
+  username: String!
+}
